@@ -13,6 +13,7 @@ setup(
     author="Mukundan Senthil",
     author_email="mukundan314@gmail.com",
     url="https://github.com/Mukundan314/cp-tools",
+    install_requires=["beautifulsoup4"],
     packages=["cp_tools"],
     classifiers=[
         "Development Status :: 3 - Alpha",

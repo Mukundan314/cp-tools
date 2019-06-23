@@ -1,1 +1,4 @@
+from .get_tests import get_tests
+
 __version__ = "0.0.1"
+__all__ = ["get_tests"]

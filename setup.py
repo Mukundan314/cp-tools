@@ -1,13 +1,11 @@
 from setuptools import setup
 
-import cp_tools
-
 with open("README.rst", "r") as fd:
     long_description = fd.read()
 
 setup(
     name="cp-tools",
-    version=cp_tools.__version__,
+    version="0.0.1",
     description="Competitive Programing Tools",
     long_description=long_description,
     author="Mukundan Senthil",

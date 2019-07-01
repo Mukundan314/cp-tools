@@ -10,9 +10,9 @@ def get_tests(contest, problem):
     with urllib.request.urlopen(url) as res:
         soup = BeautifulSoup(res.read(), "html.parser")
 
-        inputs = map(lambda x: x.pre.get_text().lstrip(),
+        inputs = map(lambda x: x.pre.get_text('\n').lstrip(),
                      soup.find_all(class_="input"))
-        outputs = map(lambda x: x.pre.get_text().lstrip(),
+        outputs = map(lambda x: x.pre.get_text('\n').lstrip(),
                       soup.find_all(class_="output"))
 
     return zip(inputs, outputs)

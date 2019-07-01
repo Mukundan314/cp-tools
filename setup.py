@@ -5,7 +5,7 @@ with open("README.rst", "r") as fd:
 
 setup(
     name="cp-tools",
-    version="0.0.1",
+    version="0.1.0",
     description="Competitive Programing Tools",
     long_description=long_description,
     author="Mukundan Senthil",

@@ -1,3 +1,4 @@
+import subprocess
 import sys
 import traceback
 
@@ -35,3 +36,17 @@ def sol2func(func):
         return out, err, exit_code
 
     return new_func
+
+
+def cmd2func(cmd):
+    def func(inp):
+        with subprocess.Popen(cmd,
+                              stdin=subprocess.PIPE,
+                              stdout=subprocess.PIPE,
+                              stderr=subprocess.PIPE) as process:
+            out, err = process.communicate(inp.encode())
+            exit_code = process.poll()
+
+        return out.decode(), err.decode(), exit_code
+
+    return func

@@ -42,7 +42,8 @@ class Tester:
             self.handle(testcase[0], out, testcase[1], verdict)
 
     def run_inputs(self, inputs, checker=None):
-        checker = (lambda inp, out: (None, None)) if checker is None else checker
+        checker = (lambda inp, out:
+                   (None, None)) if checker is None else checker
 
         for inp in inputs:
             out = self.solution(inp)

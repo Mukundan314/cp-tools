@@ -1,4 +1,4 @@
-from . import atcoder, codeforces, cses
+from . import atcoder, codeforces, cses, usaco
 
 
 def get_tests(provider, **kwargs):
@@ -8,5 +8,7 @@ def get_tests(provider, **kwargs):
         return codeforces.get_tests(kwargs["contest"], kwargs["index"])
     if provider == "cses":
         return cses.get_tests(kwargs["task"])
+    if provider == "usaco":
+        return usaco.get_tests(kwargs["problem"])
 
     raise ValueError("Unknown provider {}".format(provider))
